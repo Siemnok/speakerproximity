@@ -1,0 +1,9 @@
+#summary A compatibility summary on which devices/ROMs this app is working
+#labels Featured,Phase-QA,Compatibility
+
+|| *Device* || *ROM* || *Android Version* || *Working* || *Comments* ||
+|| HTC Nexus || CM 6 || 2.2 || <font color='green'>yes</font> || Tested by rac2030 (me)||
+|| HTC Desire || Stock || 2.2 || <font color='green'>yes</font> || Tested by Bhavana and t4c (from Androcom)||
+|| Samsung Vibrant || ??? || ??? || <font color='green'>yes</font> || Reported by jkbhso3 from XDA ||
+
+
