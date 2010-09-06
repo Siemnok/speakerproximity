@@ -3,7 +3,8 @@
 
 || *Device* || *ROM* || *Android Version* || *Working* || *Comments* ||
 || HTC Nexus || CM 6 || 2.2 || <font color='green'>yes</font> || Tested by rac2030 (me)||
+|| HTC Nexus || LeoFroyo2.0.0patch2 || 2.2 || <font color='green'>yes</font> || Tested by jkbhso3||
 || HTC Desire || Stock || 2.2 || <font color='green'>yes</font> || Tested by Bhavana and t4c (from Androcom)||
-|| Samsung Vibrant || ??? || ??? || <font color='green'>yes</font> || Reported by jkbhso3 from XDA ||
-
-
+|| Samsung Vibrant || Stock || 2.1 || <font color='green'>yes</font> || Reported by jkbhso3 from XDA and tested by bborski ||
+|| Samsung Galaxy S GT-I9000 || Stock || 2.1 || <font color='green'>yes</font> || Tested by Stef ||
+|| Motorola Droid || Stock || 2.2| <font color='green'>yes</font> || Reported by jkbhso3 from XDA ||
