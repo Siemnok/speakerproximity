@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="activate">Aktivieren</string>
+    <string name="activate_desc">Benutze den Umgebungs-sensor während eines Gesprächs um den Lautsprecher zu Aktivieren</string>
+    <string name="headset_desc">Überprüfe ob ein Headset angeschlossen ist und mache nichts</string>
+    <string name="speakerStart">Lautsprecher Start</string>
+    <string name="speakerStart_desc">Starte oder erhalte einen Anruf direkt auf dem Lautsprecher ohne das Gerät zuerst ans Ohr zu nehmen</string>
+    <string name="headset">Headset überprüfung</string>
+    <string name="menu_about">Über</string>
+    <string name="menu_send_logcat">Sende logcat</string>
+    <string name="about_version">SpeakerProximity Version %s</string>
+    <string name="about_text1">Programmiert von Michel Racic</string>
+    <string name="about_text2">Unterstützt von androcom.net</string>
+    <string name="about_text3">Icon design von  jkbhso3 von XDA</string>
+<string name="settings_header">Aktiviere Lautsprecher Funktion</string>
+    <string name="error_no_proximity_sensor">Kein Umgebungs-sensor gefunden, diese Applikation wird dir nicht von nutzen sein</string>
+<string name="conferenceCall_desc">Deaktiviert SpeakerProximity wenn das Gerät flach mit dem Display auf dem Tisch liegt</string>
+    <string name="conferenceCall">Konferenz Modus</string>
+<string name="about_translated">Deutsche übersetzung von rac2030</string>
+<string name="app_name">SpeakerProximity</string>
+</resources>

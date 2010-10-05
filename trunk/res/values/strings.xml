@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    
+    <string name="app_name">SpeakerProximity</string>
+<string name="activate">Activate</string>
+    <string name="activate_desc">Use proximity values during call to activate speaker</string>
+<string name="headset">Headset check</string>
+    <string name="headset_desc">Check if headset is in use and do nothing</string>
+<string name="speakerStart_desc">Start a received or initiated call directly on speaker without waiting until it was one time covered</string>
+    <string name="speakerStart">Speaker start</string>
+    <string name="menu_send_logcat">Send logcat</string>
+    <string name="menu_about">About</string>
+    <string name="about_text3">Icon design by  jkbhso3 from XDA</string>
+    <string name="about_text2">Powered by androcom.net</string>
+    <string name="about_text1">Written by Michel Racic</string>
+    <string name="about_version">SpeakerProximity version %s</string>
+<string name="settings_header">Activate Speaker function</string>
+    <string name="error_no_proximity_sensor">"No proximity sensor found on this hardware, I'm sorry but this application is of no use for you"</string>
+<string name="conferenceCall_desc">Disables SpeakerProximity if device is flat with the screen on a table</string>
+    <string name="conferenceCall">Conference mode</string>
+<string name="about_translated">English translation by rac2030</string>
+</resources>

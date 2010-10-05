@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string name="app_name">SpeakerProximity</string>
+  <string name="activate">Aktywuj</string>
+  <string name="activate_desc">Używaj sensora zbliżeniowego w czasie rozmowy, aby włączyć głośnik</string>
+  <string name="headset">Sprawdź headset</string>
+  <string name="headset_desc">Sprawdź, czy zestaw słuchawkowy jest używany i nic nie robi</string>
+  <string name="speakerStart_desc">Przekieruj wchodzącą lub wychodzącą rozmowę bezpośrednio do głośnika nie czekając, aż zostanie przykryty</string>
+  <string name="speakerStart">Włącz głośnik</string>
+  <string name="menu_send_logcat">Wyślij logcat</string>
+  <string name="menu_about">Informacje</string>
+  <string name="about_text3">Autor ikon: jkbhso3 z XDA</string>
+  <string name="about_text2">Powered by androcom.net</string>
+  <string name="about_text1">Napisane przez Michel Racic</string>
+  <string name="about_version">SpeakerProximity wersja %s</string>
+  <string name="settings_header">Uaktywnij funkcję głośnika</string>
+  <string name="error_no_proximity_sensor">"Nie znaleziono sensora zbliżeniowego. Przykro mi, ale ta aplikacja jest bezużyteczna dla Ciebie"</string>
+  <string name="conferenceCall_desc">Wyłącza SpeakerProximity, jeśli urządzenie leży ekranem na stole</string>
+  <string name="conferenceCall">Tryb konferencji</string>
+  <string name="about_translated">Polskie tłumaczenie: Asmodiel</string>
+</resources>
