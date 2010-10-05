@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/mainlayout"
+   	android:orientation="vertical"
+   	android:layout_width="fill_parent"
+   	android:layout_height="fill_parent">
+	<ImageView android:id="@+id/androcom"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:src="@drawable/andocom_poweredby_banner" />
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1">
+    	<TableRow>
+			<Button
+				android:id="@+id/donatePaypal"
+				android:layout_width="150dip"
+				android:layout_height="wrap_content"
+				android:layout_gravity="left"
+				android:background="@drawable/donate_paypal"
+			/>
+        	<Button android:id="@+id/donateMarket"
+				android:layout_width="150dip"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:background="@drawable/donate_market" 
+			/>
+	    </TableRow>
+	</TableLayout>
+</LinearLayout>
