@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory android:title="@string/settings_header">
+		<CheckBoxPreference
+			android:key="active"
+			android:title="@string/activate"
+			android:summary="@string/activate_desc"
+			android:defaultValue="true" />
+		<CheckBoxPreference
+			android:key="headset"
+			android:title="@string/headset"
+			android:summary="@string/headset_desc"
+			android:defaultValue="true" 
+			android:dependency="active" />
+		<CheckBoxPreference
+			android:key="speakerStart"
+			android:title="@string/speakerStart"
+			android:summary="@string/speakerStart_desc"
+			android:defaultValue="false" 
+			android:dependency="active" />
+		<CheckBoxPreference
+			android:key="conferenceCall"
+			android:title="@string/conferenceCall"
+			android:summary="@string/conferenceCall_desc"
+			android:defaultValue="false" 
+			android:dependency="active" />
+	</PreferenceCategory>
+</PreferenceScreen>
