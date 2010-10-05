@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string name="app_name">SpeakerProximity</string>
+  <string name="activate">Attiva</string>
+  <string name="activate_desc">"Usa il sensore di prossimità durante la chiamata per attivare l'altoparlante"</string>
+  <string name="headset">Controllo cuffie</string>
+  <string name="headset_desc">Controlla se ci le cuffie sono in uso e non fare nulla</string>
+  <string name="speakerStart_desc">Avvia le chiamate in ingresso ed in uscita direttamente sullo speaker senza aspettare del tempo</string>
+  <string name="speakerStart">"inizia con l'altoparlante"</string>
+  <string name="menu_send_logcat">Manda il log</string>
+  <string name="menu_about">Info</string>
+  <string name="about_text3">Design delle icone di jkbhso3 di XDA</string>
+  <string name="about_text2">Powered by androcom.net</string>
+  <string name="about_text1">Programmato da Michel Racic</string>
+  <string name="about_version">Versione %s di SpeakerProximity</string>
+  <string name="settings_header">Attiva funzione altoparlante</string>
+  <string name="error_no_proximity_sensor">"Nessun sensore di prossimità trovato su questo cellulare, mi dispiace ma quest'applicazione non ti sarà utile in alcun modo"</string>
+  <string name="conferenceCall_desc">Disabilita SpeakerProximity se il cellulare è disteso con lo schermo rivolto verso il tavolo</string>
+  <string name="conferenceCall">Modalità conferenza</string>
+  <string name="about_translated">Italian translation by Andrea Baccega</string>
+</resources>
