@@ -6,6 +6,9 @@
 || HTC Nexus || LeoFroyo2.0.0patch2 || 2.2 || <font color='green'>yes</font> || Tested by jkbhso3||
 || HTC Desire || Stock || 2.2 || <font color='green'>yes</font> || Tested by Bhavana and t4c (from Androcom)||
 || HTC ADP1 (G1) || CM 5.0.8 || 2.1 || <font color='red'>no</font> || doesn't have a proximity sensor ||
+|| HTC Blaze (T-Mobile G2) || Stock || 2.2 || <font color='green'>yes</font> || Reported by MP||
 || Samsung Vibrant || Stock || 2.1 || <font color='green'>yes</font> || Reported by jkbhso3 from XDA and tested by bborski ||
 || Samsung Galaxy S GT-I9000 || Stock || 2.1 || <font color='green'>yes</font> || Tested by Stef ||
 || Motorola Droid || Stock || 2.2 || <font color='green'>yes</font> || Reported by jkbhso3 from XDA ||
+|| Motorola DroidX || Stock || 2.2 || <font color='red'>not yet, see issue#7</font> || Reported by JI ||
+|| Motorola DroidX || Stock || 2.2 || <font color='red'>not yet, see issue#7</font> || Reported by JI ||
