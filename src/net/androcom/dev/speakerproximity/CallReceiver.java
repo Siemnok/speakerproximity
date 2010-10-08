@@ -15,14 +15,16 @@ public class CallReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		
+
 		/** Check if Application is set to be active **/
-		if(!PreferenceManager.getDefaultSharedPreferences(context).getBoolean("active", false))
+		if (!PreferenceManager.getDefaultSharedPreferences(context).getBoolean(
+				"active", false)) {
 			return;
-		
+		}
+
 		/** Start the service that handles the InCall logic **/
 		context.startService(new Intent(context, SensorService.class));
-		
+
 	}
 
 }

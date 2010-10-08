@@ -12,7 +12,10 @@ import android.content.Intent;
 public class BootReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(final Context ctx, Intent intent) {
-		/** reset the headsetConnected variable as we just booted the phone and don't want an old state **/
+		/**
+		 * reset the headsetConnected variable as we just booted the phone and
+		 * don't want an old state
+		 **/
 		SPApp.getInstance().setHeadsetConnected(false);
 		SPApp.log("HeadsetConnected variable has ben reset to false");
 	}

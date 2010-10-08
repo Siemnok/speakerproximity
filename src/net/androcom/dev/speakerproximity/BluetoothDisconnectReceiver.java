@@ -14,17 +14,20 @@ import android.preference.PreferenceManager;
 
 public class BluetoothDisconnectReceiver extends BroadcastReceiver {
 	/** Which audio class to listen for, we only want headsets **/
-	int remoteAudioClass = BluetoothClass.Device.AUDIO_VIDEO_HANDSFREE | BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES | BluetoothClass.Device.AUDIO_VIDEO_PORTABLE_AUDIO;
-	
+	int	remoteAudioClass	= BluetoothClass.Device.AUDIO_VIDEO_HANDSFREE
+									| BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES
+									| BluetoothClass.Device.AUDIO_VIDEO_PORTABLE_AUDIO;
+
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		if (!PreferenceManager.getDefaultSharedPreferences(context).getBoolean("headset", true)) {
+		if (!PreferenceManager.getDefaultSharedPreferences(context).getBoolean(
+				"headset", true)) {
 			return;
 		}
-		BluetoothDevice btDevice = intent.getExtras().getParcelable(BluetoothDevice.EXTRA_DEVICE);
-		int btDevClass = btDevice.getBluetoothClass().getDeviceClass();
-		if ((btDevClass & remoteAudioClass) != 0)
-		{
+		final BluetoothDevice btDevice = intent.getExtras().getParcelable(
+				BluetoothDevice.EXTRA_DEVICE);
+		final int btDevClass = btDevice.getBluetoothClass().getDeviceClass();
+		if ((btDevClass & remoteAudioClass) != 0) {
 			SPApp.getInstance().registerProximityListener();
 			SPApp.getInstance().setHeadsetConnected(false);
 			SPApp.log("Bluetooth headset has been disconnected");

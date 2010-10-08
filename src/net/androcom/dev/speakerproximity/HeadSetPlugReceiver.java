@@ -15,8 +15,7 @@ public class HeadSetPlugReceiver extends BroadcastReceiver {
 		if (intent.getExtras().getInt("state") == 0) {
 			SPApp.getInstance().registerProximityListener();
 			SPApp.getInstance().setHeadsetConnected(false);
-		}
-		else {
+		} else {
 			SPApp.getInstance().unregisterProximityListener();
 			SPApp.getInstance().setHeadsetConnected(true);
 		}

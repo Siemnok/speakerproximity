@@ -20,23 +20,27 @@ import android.util.Log;
 
 public class SPApp extends Application {
 	/** Self instance reference to be pulled from an activity **/
-	private static SPApp instance;
-	
+	private static SPApp		instance;
+
 	/** used for the sensor management **/
-	private SensorEventListener proximityListener; 
-	private SensorManager sensorManager;
-	private SensorEventListener orientationListener;
-	
-	/** handling headset changes, taken from http://proximitytoolextension.googlecode.com **/
-	private BroadcastReceiver headSetPlugReceiver;
-	private BroadcastReceiver bluetoothConnectReceiver;
-	private BroadcastReceiver bluetoothDisconnectReceiver;
-	
+	private SensorEventListener	proximityListener;
+	private SensorManager		sensorManager;
+	private SensorEventListener	orientationListener;
+
+	/**
+	 * handling headset changes, taken from
+	 * http://proximitytoolextension.googlecode.com
+	 **/
+	private BroadcastReceiver	headSetPlugReceiver;
+	private BroadcastReceiver	bluetoothConnectReceiver;
+	private BroadcastReceiver	bluetoothDisconnectReceiver;
+
 	/** State variables **/
-	private boolean inCall;
-	//private boolean headsetConnected;
-	
-	
+	private boolean				inCall;
+	private boolean				inCalibration;
+
+	// private boolean headsetConnected;
+
 	@Override
 	public void onCreate() {
 		instance = this;
@@ -95,14 +99,17 @@ public class SPApp extends Application {
 			BroadcastReceiver bluetoothDisconnectReceiver) {
 		this.bluetoothDisconnectReceiver = bluetoothDisconnectReceiver;
 	}
-	
+
 	/**
 	 * This is a static logging method to handle logging in one place
 	 * 
-	 * @param msg to be logged
+	 * @param msg
+	 *            to be logged
 	 */
 	public static void log(String msg) {
-		Log.d("SpeakerProximity", "["+new SimpleDateFormat("HH:mm:ss").format(new Date())+"] "+ msg);
+		Log.d("SpeakerProximity", "["
+				+ new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] "
+				+ msg);
 	}
 
 	public boolean isInCall() {
@@ -113,27 +120,42 @@ public class SPApp extends Application {
 		this.inCall = inCall;
 	}
 
+	public boolean isInCalibration() {
+		return inCalibration;
+	}
+
+	public void setInCalibration(boolean inCalibration) {
+		this.inCalibration = inCalibration;
+	}
+
 	public boolean isHeadsetConnected() {
-		return PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean("isHeadsetConnected", true);
+		return PreferenceManager.getDefaultSharedPreferences(
+				getApplicationContext())
+				.getBoolean("isHeadsetConnected", false);
 	}
 
 	public void setHeadsetConnected(boolean headsetConnected) {
-		Editor prefsEditor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit(); // get the preference writer
+		Editor prefsEditor = PreferenceManager.getDefaultSharedPreferences(
+				getApplicationContext()).edit(); // get the preference writer
 		prefsEditor.putBoolean("isHeadsetConnected", headsetConnected);
 		prefsEditor.commit();
 		prefsEditor = null;
 	}
-	
+
 	public boolean registerProximityListener() {
-		if(inCall) {
-			return getSensorManager().registerListener(getProximityListener(), getSensorManager().getDefaultSensor(Sensor.TYPE_PROXIMITY), SensorManager.SENSOR_DELAY_FASTEST);
+		if (inCall || inCalibration) {
+			log("registered proximity listener");
+			return getSensorManager().registerListener(getProximityListener(),
+					getSensorManager().getDefaultSensor(Sensor.TYPE_PROXIMITY),
+					SensorManager.SENSOR_DELAY_FASTEST);
 		} else {
 			return false;
 		}
 	}
-	
+
 	public void unregisterProximityListener() {
-		if(getProximityListener() != null) {
+		log("unregistered proximity listener");
+		if (getProximityListener() != null) {
 			getSensorManager().unregisterListener(getProximityListener());
 		}
 	}

@@ -19,4 +19,14 @@
 <string name="conferenceCall_desc">Disables SpeakerProximity if device is flat with the screen on a table</string>
     <string name="conferenceCall">Conference mode</string>
 <string name="about_translated">English translation by rac2030</string>
+<string name="calibration_header">Sensor calibration</string>
+<string name="calibration_uncovered">Uncovered = [%s]</string>
+    <string name="calibration_init">Initialize = [%s]</string>
+    <string name="calibration_covered">Covered = [%s]</string>
+    <string name="calibration_do_show_uncovered">Uncovered value is %s</string>
+    <string name="calibration_do_show_init">Initialization value is %s</string>
+    <string name="calibration_do_uncovered">Please uncover the proximity sensor and wait for 2 beeps</string>
+    <string name="calibration_do_covered">Please cover the proximity sensor and wait for 2 beeps</string>
+    <string name="calibration_do_toggle">Please cover and uncover the sensor for %s times</string>
+    <string name="calibration_do_show_covered">Covered value is %s</string>
 </resources>
