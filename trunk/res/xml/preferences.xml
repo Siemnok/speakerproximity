@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
 	xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory android:title="@string/calibration_header">
+		<net.androcom.dev.speakerproximity.CalibrationPreference  
+                android:key="calibration"
+                android:title="Calibrate" /> 
+	</PreferenceCategory>
 	<PreferenceCategory android:title="@string/settings_header">
 		<CheckBoxPreference
 			android:key="active"

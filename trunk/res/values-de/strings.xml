@@ -18,4 +18,13 @@
     <string name="conferenceCall">Konferenz Modus</string>
 <string name="about_translated">Deutsche übersetzung von rac2030</string>
 <string name="app_name">SpeakerProximity</string>
+<string name="calibration_uncovered">Frei = [%s]</string>
+    <string name="calibration_init">Initialisierung = [%s]</string>
+    <string name="calibration_covered">Bedeckt = [%s]</string>
+    <string name="calibration_header">Sensor Kalibrierung</string>
+    <string name="calibration_do_show_uncovered">Frei Wert ist %s</string>
+    <string name="calibration_do_show_init">Initialisierungs Wert ist %s</string>
+    <string name="calibration_do_uncovered">Bitte legen sie den Sensor frei und warten 2 Signalzeichen ab</string>
+    <string name="calibration_do_covered">Bitte bedecken sie den Sensor und warten 2 Signalzeichen ab</string>
+    <string name="calibration_do_show_covered">Bedeckter Wert ist %s</string>
 </resources>

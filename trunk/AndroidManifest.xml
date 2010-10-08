@@ -1,90 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="net.androcom.dev.speakerproximity"
-      android:versionCode="1010051"
-      android:versionName="0.3 [beta]">
-    <application android:icon="@drawable/icon" 
-    				android:label="@string/app_name"
-    				android:name=".SPApp">
-
-    	<!-- activity that displays the preferences for the service -->
-        <activity android:name=".SpeakerProximity"
-                  android:label="@string/app_name"
-                  android:screenOrientation="nosensor"
-            	  android:configChanges="orientation|keyboardHidden">
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest android:versionCode="1010081"
+    android:versionName="0.3.1 [beta]"
+    package="net.androcom.dev.speakerproximity" xmlns:android="http://schemas.android.com/apk/res/android">
+    <application android:icon="@drawable/icon"
+        android:label="@string/app_name" android:name=".SPApp">
+        <!-- activity that displays the preferences for the service -->
+        <activity android:label="@string/app_name" android:name=".SpeakerProximity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <!-- preferences screen -->
-        <activity
-			android:name=".PreferenceScreen"
-			android:label="@string/app_name">
-		</activity>
-
-		<!-- the receiver for the phone state broadcasts -->
-		<receiver android:name=".CallReceiver">
-    		<intent-filter>
-     		<action android:name="android.intent.action.PHONE_STATE" />
-    		</intent-filter>
-		</receiver>
-		
-		<!--  Bluetooth receivers to handle headset activity -->
-		
-		<receiver android:name=".BluetoothConnectReceiver">
-    		<intent-filter>
-     		<action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
-    		</intent-filter>
-		</receiver>
-		<receiver android:name=".BluetoothDisconnectReceiver">
-    		<intent-filter>
-     		<action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
-    		</intent-filter>
-		</receiver>
-		
-		<!-- Defining the boot receiver for initial BT headset variable reset -->
-		<receiver android:name=".BootReceiver" android:label="@string/app_name">
-      		<intent-filter>
-        		<action android:name="android.intent.action.BOOT_COMPLETED"/>
-      		</intent-filter>
-    	</receiver>
-    	
-		<!-- log collector activity start from http://android-log-collector.googlecode.com-->
-		 <activity android:name=".log.SendLogActivity"
-                  android:label="@string/app_name"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        <activity android:label="@string/app_name" android:name=".PreferenceScreen"/>
+        <!-- the receiver for the phone state broadcasts -->
+        <receiver android:name=".CallReceiver">
             <intent-filter>
-                <action android:name="net.androcom.dev.speakerproximity.log.intent.action.SEND_LOG" />
-                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <!--  Bluetooth receivers to handle headset activity -->
+        <receiver android:name=".BluetoothConnectReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BluetoothDisconnectReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <!-- Defining the boot receiver for initial BT headset variable reset -->
+        <receiver android:label="@string/app_name" android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <!-- log collector activity start from http://android-log-collector.googlecode.com-->
+        <activity android:label="@string/app_name"
+            android:name=".log.SendLogActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="net.androcom.dev.speakerproximity.log.intent.action.SEND_LOG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-		<!-- log collector activity end -->
-
-		<!-- service that runs during a call and automatically end after the call is finished, it will handle all the sensor listeners and the logic-->        
-        <service android:name=".SensorService" /> 
-
+        <!-- log collector activity end -->
+        <!-- service that runs during a call and automatically end after the call is finished, it will handle all the sensor listeners and the logic-->
+        <service android:name=".SensorService"/>
+        <activity android:name=".CalibrationActivity" android:theme="@android:style/Theme.Dialog"/>
     </application>
-    <uses-sdk android:minSdkVersion="4" />
-
+    <uses-sdk android:minSdkVersion="4"/>
     <!-- used to register for a PhoneEvent receiver that can rect if there is a incoming/outgoing call and when it ends -->
-	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-	<!-- used to reroute the audio to the speaker or back -->
-	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-
-	<!-- needed to turn screen off if proximity is 0 as the Phone app doesnt handle it anymore once my service is started -->
-	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
-
-	<!-- needed to handle the bluetooth headset plugged in/out states -->
-	<uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
-	
-	<!-- needed to reset the bluetooth headset plugged in/out state -->
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-
-	<!-- log collector permission start --> 
-	<uses-permission android:name="android.permission.READ_LOGS" />
-	<!-- log collector permission end -->
-	
-</manifest> 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- used to reroute the audio to the speaker or back -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- needed to turn screen off if proximity is 0 as the Phone app doesnt handle it anymore once my service is started -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- needed to handle the bluetooth headset plugged in/out states -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!-- needed to reset the bluetooth headset plugged in/out state -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- log collector permission start -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <!-- log collector permission end -->
+</manifest>
