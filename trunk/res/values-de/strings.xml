@@ -24,7 +24,8 @@
     <string name="calibration_header">Sensor Kalibrierung</string>
     <string name="calibration_do_show_uncovered">Frei Wert ist %s</string>
     <string name="calibration_do_show_init">Initialisierungs Wert ist %s</string>
-    <string name="calibration_do_uncovered">Bitte legen sie den Sensor frei und warten 2 Signalzeichen ab</string>
-    <string name="calibration_do_covered">Bitte bedecken sie den Sensor und warten 2 Signalzeichen ab</string>
+    
+    
     <string name="calibration_do_show_covered">Bedeckter Wert ist %s</string>
+<string name="calibration_do_toggle">Bitte den Sensor %s mal bedecken und wieder frei legen</string>
 </resources>

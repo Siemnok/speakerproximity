@@ -33,7 +33,7 @@ import android.widget.TextView;
 public class SpeakerProximity extends ActivityGroup {
 
 	private final String	paypalDonateUrl	= "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SJDNMZ5JLZRSU&lc=CH&item_name=rac&item_number=SpeakerProximity&currency_code=CHF&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted";
-	// private final String marketDonateUrl = "market://search?q=pub:rac";
+//	private final String marketDonateUrl = "market://search?q=pub:rac";
 	private final String	marketDonateUrl	= "market://search?q=net.androcom.dev.speakerproximity";
 	private final String	androcomUrl		= "http://www.androcom.net";
 
