@@ -25,8 +25,8 @@
     <string name="calibration_covered">Covered = [%s]</string>
     <string name="calibration_do_show_uncovered">Uncovered value is %s</string>
     <string name="calibration_do_show_init">Initialization value is %s</string>
-    <string name="calibration_do_uncovered">Please uncover the proximity sensor and wait for 2 beeps</string>
-    <string name="calibration_do_covered">Please cover the proximity sensor and wait for 2 beeps</string>
+    
+    
     <string name="calibration_do_toggle">Please cover and uncover the sensor for %s times</string>
     <string name="calibration_do_show_covered">Covered value is %s</string>
 </resources>
