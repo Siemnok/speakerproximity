@@ -29,4 +29,7 @@
     
     <string name="calibration_do_toggle">Please cover and uncover the sensor for %s times</string>
     <string name="calibration_do_show_covered">Covered value is %s</string>
+<string name="donate_paypal">Donate via PayPal</string>
+    <string name="donate_market">Donate via Market</string>
+    <string name="androcom_logo">Androcom logo</string>
 </resources>

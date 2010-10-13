@@ -8,7 +8,9 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
-		android:src="@drawable/andocom_poweredby_banner" />
+		android:src="@drawable/andocom_poweredby_banner"
+		android:focusable="true"
+		android:contentDescription="@string/androcom_logo" />
 	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -20,12 +22,14 @@
 				android:layout_height="wrap_content"
 				android:layout_gravity="left"
 				android:background="@drawable/donate_paypal"
+				android:contentDescription="@string/donate_paypal"
 			/>
         	<Button android:id="@+id/donateMarket"
 				android:layout_width="150dip"
 				android:layout_height="wrap_content"
 				android:layout_gravity="right"
-				android:background="@drawable/donate_market" 
+				android:background="@drawable/donate_market"
+				android:contentDescription="@string/donate_market"  
 			/>
 	    </TableRow>
 	</TableLayout>
