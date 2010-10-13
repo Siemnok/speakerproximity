@@ -12,6 +12,7 @@
         android:layout_marginBottom="8dip"
         android:textSize="16sp"
         android:textColor="#ffff"
+        android:focusable="true"
         />
     <TextView
     	android:id="@+id/calibration_do_toggle"
@@ -20,6 +21,7 @@
         android:layout_marginBottom="8dip"
         android:textSize="16sp"
         android:textColor="#ffff"
+        android:focusable="true"
         />
     <TextView
     	android:id="@+id/calibration_do_show_covered"
@@ -28,6 +30,7 @@
         android:layout_marginBottom="8dip"
         android:textSize="16sp"
         android:textColor="#ffff"
+        android:focusable="true"
         />
     <TextView
     	android:id="@+id/calibration_do_show_uncovered"
@@ -36,6 +39,7 @@
         android:layout_marginBottom="8dip"
         android:textSize="16sp"
         android:textColor="#ffff"
+        android:focusable="true"
         />
 	<TextView
     	android:id="@+id/calibration_error"
@@ -44,6 +48,6 @@
         android:layout_marginBottom="8dip"
         android:textSize="16sp"
         android:textColor="#ff0000"
+        android:focusable="true"
         />
-
 </LinearLayout>

@@ -28,4 +28,7 @@
     
     <string name="calibration_do_show_covered">Bedeckter Wert ist %s</string>
 <string name="calibration_do_toggle">Bitte den Sensor %s mal bedecken und wieder frei legen</string>
+<string name="donate_paypal">Über PayPal Spenden</string>
+    <string name="donate_market">Über den Market Spenden</string>
+    <string name="androcom_logo">Androcom Logo</string>
 </resources>
