@@ -39,7 +39,7 @@ public class MyPhoneStateListener extends PhoneStateListener {
 
 	/** used for turning screen off or on **/
 	private final PowerManager				pm;
-	private final PowerManager.WakeLock		wl;
+	private PowerManager.WakeLock		wl;
 
 	/** temporary variables **/
 	private boolean							phoneWasCovered					= false;
@@ -72,7 +72,13 @@ public class MyPhoneStateListener extends PhoneStateListener {
 				.getSystemService(Context.AUDIO_SERVICE);
 		/** get the powermanager service reference from the system **/
 		pm = (PowerManager) ctx.getSystemService(Context.POWER_SERVICE);
-		wl = pm.newWakeLock(PROXIMITY_SCREEN_OFF_WAKE_LOCK, "SpeakerProximity");
+		/** get the wakelock to turn display off **/
+		try {
+			wl = pm.newWakeLock(PROXIMITY_SCREEN_OFF_WAKE_LOCK, "SpeakerProximity");
+		} catch (Exception e) {
+			wl = null;
+			SPApp.log("can't get wakelock to turn display off, sorry");
+		}
 		app.setProximityListener(new SensorEventListener() {
 			@Override
 			public void onAccuracyChanged(Sensor sensor, int accuracy) {
@@ -180,14 +186,15 @@ public class MyPhoneStateListener extends PhoneStateListener {
 				phoneWasCovered = false;
 				SPApp.log("Phone gets IDLE");
 
-				/**
-				 * handling the screnn off stuff, taken from
-				 * http://proximitytoolextension.googlecode.com
-				 **/
-				if (wl.isHeld()) {
-					wl.release();
+				if (wl != null) {
+					/**
+					 * handling the screen off stuff, taken from
+					 * http://proximitytoolextension.googlecode.com
+					 **/
+					if (wl.isHeld()) {
+						wl.release();
+					}
 				}
-
 				/**
 				 * handling headset changes, taken from
 				 * http://proximitytoolextension.googlecode.com
@@ -221,14 +228,15 @@ public class MyPhoneStateListener extends PhoneStateListener {
 				}
 				SPApp.log("Phone is picked up");
 
-				/**
-				 * handling the screnn off stuff, taken from
-				 * http://proximitytoolextension.googlecode.com
-				 **/
-				if (!wl.isHeld()) {
-					wl.acquire();
+				if (wl != null) {
+					/**
+					 * handling the screnn off stuff, taken from
+					 * http://proximitytoolextension.googlecode.com
+					 **/
+					if (!wl.isHeld()) {
+						wl.acquire();
+					}
 				}
-
 				/**
 				 * handling headset changes, taken from
 				 * http://proximitytoolextension.googlecode.com
