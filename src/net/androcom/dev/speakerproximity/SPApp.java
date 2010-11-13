@@ -156,7 +156,11 @@ public class SPApp extends Application {
 	public void unregisterProximityListener() {
 		log("unregistered proximity listener");
 		if (getProximityListener() != null) {
-			getSensorManager().unregisterListener(getProximityListener());
+			try {
+				getSensorManager().unregisterListener(getProximityListener());
+			} catch (Exception e) {
+				// do nothing as it's not probably just mot registered
+			}
 		}
 	}
 }
