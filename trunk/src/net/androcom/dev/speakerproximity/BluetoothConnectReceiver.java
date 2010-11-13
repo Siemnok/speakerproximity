@@ -26,11 +26,16 @@ public class BluetoothConnectReceiver extends BroadcastReceiver {
 		}
 		final BluetoothDevice btDevice = intent.getExtras().getParcelable(
 				BluetoothDevice.EXTRA_DEVICE);
-		final int btDevClass = btDevice.getBluetoothClass().getDeviceClass();
-		if ((btDevClass & remoteAudioClass) != 0) {
-			SPApp.getInstance().unregisterProximityListener();
-			SPApp.getInstance().setHeadsetConnected(true);
-			SPApp.log("Bluetooth headset has been connected");
+		if(btDevice != null) {
+			final BluetoothClass btClass = btDevice.getBluetoothClass(); 
+			if (btClass != null) {
+				final int btDevClass = btClass.getDeviceClass();
+				if ((btDevClass & remoteAudioClass) != 0) {
+					SPApp.getInstance().unregisterProximityListener();
+					SPApp.getInstance().setHeadsetConnected(true);
+					SPApp.log("Bluetooth headset has been connected");
+				}
+			}
 		}
 	}
 }
