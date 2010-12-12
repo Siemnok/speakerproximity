@@ -13,6 +13,11 @@
 			android:summary="@string/activate_desc"
 			android:defaultValue="true" />
 		<CheckBoxPreference
+			android:key="handleScreenOff"
+			android:title="@string/handle_screen_off"
+			android:summary="@string/handle_screen_off_desc"
+			android:defaultValue="true" />
+		<CheckBoxPreference
 			android:key="headset"
 			android:title="@string/headset"
 			android:summary="@string/headset_desc"

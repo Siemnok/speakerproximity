@@ -32,4 +32,6 @@
 <string name="donate_paypal">Donate via PayPal</string>
     <string name="donate_market">Donate via Market</string>
     <string name="androcom_logo">Androcom logo</string>
+<string name="handle_screen_off_desc">Disable if you expierience the problem that proximity sensing continues after a call.</string>
+    <string name="handle_screen_off">Handle screen off behaviour</string>
 </resources>
