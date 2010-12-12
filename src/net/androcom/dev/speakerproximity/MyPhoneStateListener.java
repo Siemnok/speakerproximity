@@ -73,11 +73,13 @@ public class MyPhoneStateListener extends PhoneStateListener {
 		/** get the powermanager service reference from the system **/
 		pm = (PowerManager) ctx.getSystemService(Context.POWER_SERVICE);
 		/** get the wakelock to turn display off **/
-		try {
-			wl = pm.newWakeLock(PROXIMITY_SCREEN_OFF_WAKE_LOCK, "SpeakerProximity");
-		} catch (Exception e) {
-			wl = null;
-			SPApp.log("can't get wakelock to turn display off, sorry");
+		if (prefs.getBoolean("handleScreenOff", true)) {
+			try {
+				wl = pm.newWakeLock(PROXIMITY_SCREEN_OFF_WAKE_LOCK, "SpeakerProximity");
+			} catch (Exception e) {
+				wl = null;
+				SPApp.log("can't get wakelock to turn display off, sorry");
+			}
 		}
 		app.setProximityListener(new SensorEventListener() {
 			@Override
@@ -228,13 +230,15 @@ public class MyPhoneStateListener extends PhoneStateListener {
 				}
 				SPApp.log("Phone is picked up");
 
-				if (wl != null) {
-					/**
-					 * handling the screnn off stuff, taken from
-					 * http://proximitytoolextension.googlecode.com
-					 **/
-					if (!wl.isHeld()) {
-						wl.acquire();
+				if (prefs.getBoolean("handleScreenOff", true)) {
+					if (wl != null) {
+						/**
+						 * handling the screnn off stuff, taken from
+						 * http://proximitytoolextension.googlecode.com
+						 **/
+						if (!wl.isHeld()) {
+							wl.acquire();
+						}
 					}
 				}
 				/**

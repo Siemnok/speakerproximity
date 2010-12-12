@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Generated with crowdin.net-->
+<resources>
+  <string name="app_name">SpeakerProximity</string>
+  <string name="activate">Aktivoi</string>
+  <string name="activate_desc">Käytä läheisyysarvoja puhelun aikana aktivoidaaksesi kaiutin</string>
+  <string name="headset">Headset tarkistus</string>
+  <string name="headset_desc">Tariska, jos kuuloke on käytössä ja eikä tee mitään</string>
+  <string name="speakerStart_desc">Aloittaa vastaanotettu tai aloittaa puhelun suoraan kaiuttimelta odomatta, kunnes se on peitetty kerran
+
+Kysymys michal.slupczynskilta: Kuinka peität kaiuttimen?
+Vastaus: Läheisyysanturi peittyy, kun pidän puhelinta korvan vieressä</string>
+  <string name="speakerStart">Kaiuttimen aloitus</string>
+  <string name="menu_send_logcat">Lähetä logcat</string>
+  <string name="menu_about">Tietoja</string>
+  <string name="about_text3">Kuvake suunittelu jkbhso3 XDA-sivuulta</string>
+  <string name="about_text2">Moottoroidunut androcom.net</string>
+  <string name="about_text1">Kirjoittanut Michel Racic</string>
+  <string name="about_version">SpeakerProximity versio %s</string>
+  <string name="settings_header">Aktivoi Kaiutintoiminto</string>
+  <string name="error_no_proximity_sensor">"Läheisyysanturia ei löytynyt laitteestasi. Olen pahoilla, mutta tässä sovelluksesta ei ole hyötyä"</string>
+  <string name="conferenceCall_desc">Poista SpeakerProximity käytöstä jos laiteen näyttö on tasaisella pinnalla
+
+Kysymys michal.slupczynskilta: Mikä tämä "SpeakerProximity" juttu on?
+Vastaus: SpeakerProximity on sovelluksen nimi ja sitä ei kuulu kääntää
+
+Kysymys michal.slupczynskilta: Onko “ruutu” TV:n tai jokin muu?
+Vastaus: ruudulla tarkoita puhelimen</string>
+  <string name="conferenceCall">Konferenssitila</string>
+  <string name="about_translated">Suommennos Patrik Selin</string>
+  <string name="calibration_header">Anturin kalibrointi</string>
+  <string name="calibration_uncovered">Peittämätön = [%s]</string>
+  <string name="calibration_init">Alusta = [%s]</string>
+  <string name="calibration_covered">Peitetty = [%s]</string>
+  <string name="calibration_do_show_uncovered">Peittämätön arvo on %s</string>
+  <string name="calibration_do_show_init">Alustuksen arvo on %s</string>
+  <string name="calibration_do_toggle">Peitä ja paljasta anturi %s kertaa</string>
+  <string name="calibration_do_show_covered">Peitetty arvo on %s</string>
+</resources>

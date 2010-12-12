@@ -31,4 +31,6 @@
 <string name="donate_paypal">Über PayPal Spenden</string>
     <string name="donate_market">Über den Market Spenden</string>
     <string name="androcom_logo">Androcom Logo</string>
+<string name="handle_screen_off_desc">Deaktiviere diese Einstellung wenn du das Problem hast, dass der proximity Sensor nach einem Anruf einfach weiterläuft.</string>
+    <string name="handle_screen_off">Display Ein/Aus übernehmen</string>
 </resources>
